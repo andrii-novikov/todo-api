@@ -7,6 +7,10 @@ gem 'listen'
 gem 'active_model_serializers'
 gem 'devise_token_auth'
 gem 'cancancan'
+gem 'devise'
+gem 'omniauth-github'
+gem 'omniauth-facebook'
+
 
 group :development, :test do
   # Use RSpec for specs
