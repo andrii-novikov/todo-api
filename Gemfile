@@ -1,28 +1,26 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '~> 5.0.2'
-
-gem 'rails-api'
-
 gem 'spring', :group => :development
+gem 'pg'
+gem 'listen'
+gem 'active_model_serializers'
+gem 'devise_token_auth'
+gem 'cancancan'
 
+group :development, :test do
+  # Use RSpec for specs
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+  gem 'database_cleaner'
+  gem 'rails-controller-testing', git: 'https://github.com/rails/rails-controller-testing'
+  gem 'spring-commands-rspec', git: 'https://github.com/jonleighton/spring-commands-rspec'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
+  gem 'rubocop'
 
-gem 'sqlite3'
-
-
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', :group => :development
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+  #debug
+  gem 'pry'
+  gem 'rails-pry'
+  gem 'pry-byebug'
+end
