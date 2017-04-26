@@ -1,5 +1,7 @@
-class Api::V1::ProjectsController < API::V1::ApplicationController
+class Api::V1::ProjectsController < ApplicationController
+  load_and_authorize_resource
   def create
+    binding.pry
   end
 
   def index
@@ -9,5 +11,11 @@ class Api::V1::ProjectsController < API::V1::ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def project_params
+    params.require(:project).permit(:name)
   end
 end

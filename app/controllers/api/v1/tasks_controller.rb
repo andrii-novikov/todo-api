@@ -1,13 +1,20 @@
-class Api::V1::TasksController < API::V1::ApplicationController
-  def create
-  end
+module Api
+  module V1
+    class TasksController < ApplicationController
+      load_and_authorize_resource
 
-  def index
-  end
+      def create
+      end
 
-  def show
-  end
+      def index
+      end
 
-  def destroy
+      def show
+      end
+
+      def destroy
+      end
+    end
+
   end
 end
