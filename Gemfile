@@ -10,6 +10,8 @@ gem 'cancancan'
 gem 'devise'
 gem 'omniauth-github'
 gem 'omniauth-facebook'
+gem 'rack-cors', :require => 'rack/cors'
+
 
 
 group :development, :test do
