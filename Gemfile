@@ -7,6 +7,12 @@ gem 'listen'
 gem 'active_model_serializers'
 gem 'devise_token_auth'
 gem 'cancancan'
+gem 'devise'
+gem 'omniauth-github'
+gem 'omniauth-facebook'
+gem 'rack-cors', :require => 'rack/cors'
+
+
 
 group :development, :test do
   # Use RSpec for specs
